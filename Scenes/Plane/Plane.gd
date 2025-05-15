@@ -13,3 +13,4 @@ func _process(delta: float) -> void:
 
 func _physics_process(delta: float) -> void:
 	velocity.y += _gravity * delta
+	move_and_slide()
