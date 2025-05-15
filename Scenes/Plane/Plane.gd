@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+const JUMP_POWER: float = -350.00
+
 var _gravity: float = ProjectSettings.get("physics/2d/default_gravity")
 
 # Called when the node enters the scene tree for the first time.
