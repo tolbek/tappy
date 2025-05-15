@@ -39,8 +39,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sbsdq"]
 _data = {
-"RESET": SubResource("Animation_dwb27"),
-"flash": SubResource("Animation_c8bua")
+&"RESET": SubResource("Animation_dwb27"),
+&"flash": SubResource("Animation_c8bua")
 }
 
 [node name="laser" type="Area2D"]
