@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 const JUMP_POWER: float = -350.00
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 var _gravity: float = ProjectSettings.get("physics/2d/default_gravity")
 
 # Called when the node enters the scene tree for the first time.
@@ -18,5 +20,6 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("jump") == true:
 		velocity.y = JUMP_POWER
+		animation_player.play("jump")
 	
 	move_and_slide()
