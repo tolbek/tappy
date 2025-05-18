@@ -17,18 +17,18 @@ func _process(delta: float) -> void:
 	pass
 
 func _physics_process(delta: float) -> void:
-	velocity.y += _gravity * delta
 	
-	if Input.is_action_just_pressed("jump") == true:
-		velocity.y = JUMP_POWER
-		animation_player.play("jump")
-	
+	fly(delta)
 	move_and_slide()
 	
 	if is_on_floor() == true:
 		die()
 
-
+func fly(delta: float) -> void:
+	velocity.y += _gravity * delta
+	if Input.is_action_just_pressed("jump") == true:
+		velocity.y = JUMP_POWER
+		animation_player.play("jump")
 
 func die() -> void:
 	animated_sprite_2d.stop()
