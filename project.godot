@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="tappy"
-run/main_scene="uid://bnkparllegt3k"
+run/main_scene="uid://x4cgiwgg5kxw"
 config/features=PackedStringArray("4.4", "Mobile")
 
 [display]
 
 window/size/viewport_width=480
 window/size/viewport_height=854
-window/stretch/mode="canvas_items"
 
 [editor]
 
