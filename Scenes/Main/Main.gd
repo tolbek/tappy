@@ -11,8 +11,7 @@ func _input(event: InputEvent) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("jump") and event.is_echo() == false:
-		print("_unhandled_input:", event)
-		get_tree().change_scene_to_packed(GAME)
+		GameManager.load_game_scene()
 
 func _ready() -> void:
 	get_tree().paused = false
