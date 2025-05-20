@@ -14,6 +14,10 @@ config/name="tappy"
 run/main_scene="uid://x4cgiwgg5kxw"
 config/features=PackedStringArray("4.4", "Mobile")
 
+[autoload]
+
+SignalHub="*res://Globals/SignalHub.gd"
+
 [display]
 
 window/size/viewport_width=480

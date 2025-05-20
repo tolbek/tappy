@@ -10,6 +10,10 @@ const PIPES = preload("res://Scenes/Pipes/Pipes.tscn")
 func _ready() -> void:
 	spawn_pipes()
 
+func _enter_tree() -> void:
+	SignalHub.on_plane_died.connect(_on_plane_died)
+
+
 func spawn_pipes() -> void:
 	var newpipes = PIPES.instantiate()
 	var y_pos: float = randf_range(
