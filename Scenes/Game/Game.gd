@@ -1,12 +1,16 @@
 extends Node2D
 
 const PIPES = preload("res://Scenes/Pipes/Pipes.tscn")
-
+var MAIN = load("res://Scenes/Main/Main.tscn")
 
 @onready var pipes_holder: Node = $PipesHolder
 @onready var upper_point: Marker2D = $UpperPoint
 @onready var lower_point: Marker2D = $LowerPoint
-#@onready var plane: Tappy = $Plane
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("Exit") and event.is_echo() == false:
+		print("_unhandled_input:", event)
+		get_tree().change_scene_to_packed(MAIN)
 
 
 
