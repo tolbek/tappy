@@ -1,12 +1,23 @@
 extends Control
-
+const GAME = preload("res://Scenes/Game/Game.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _input(event: InputEvent) -> void:
-	if event is InputEventKey:
-		print(event)
+	#if event is InputEventKey:
+		#print(event)
+	if event.is_action_pressed("jump") and event.is_echo() == false:
+		print("_input:", event)
+		get_tree().change_scene_to_packed(GAME)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("jump") and event.is_echo() == false:
+		print("_unhandled_input:", event)
+		get_tree().change_scene_to_packed(GAME)
 
 
+func _ready() -> void:
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("jump") == true:
+		print("Jump")
