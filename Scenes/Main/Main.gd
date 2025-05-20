@@ -14,9 +14,9 @@ func _unhandled_input(event: InputEvent) -> void:
 		print("_unhandled_input:", event)
 		get_tree().change_scene_to_packed(GAME)
 
-
 func _ready() -> void:
-	pass
+	get_tree().paused = false
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("jump") == true:
