@@ -8,6 +8,8 @@
 script = ExtResource("1_u8oov")
 
 [node name="Laser" parent="." instance=ExtResource("1_cd7t7")]
+z_as_relative = false
+collision_layer = 0
 
 [node name="Lower" parent="." instance=ExtResource("2_nqmk8")]
 position = Vector2(0, 80)
@@ -17,7 +19,9 @@ position = Vector2(0, -80)
 rotation = 3.14159
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
-position = Vector2(221, 0)
+position = Vector2(97, -30)
+scale = Vector2(0.973, 1)
+rect = Rect2(20, 20, 20, 20)
 
 [connection signal="body_entered" from="Laser" to="." method="_on_laser_body_entered"]
 [connection signal="body_entered" from="Lower" to="." method="_on_pipe_body_entered"]

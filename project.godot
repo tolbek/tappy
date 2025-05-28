@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.4", "Mobile")
 
 SignalHub="*res://Globals/SignalHub.gd"
 GameManager="*res://Globals/GameManager.gd"
+ScoreManager="*res://Globals/ScoreManager.gd"
 
 [display]
 

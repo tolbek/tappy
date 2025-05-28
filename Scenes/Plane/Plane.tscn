@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://b82syvdm740wg"]
+[gd_scene load_steps=12 format=3 uid="uid://b82syvdm740wg"]
 
 [ext_resource type="Texture2D" uid="uid://doao2cl8fhj30" path="res://assets/plane/planes_sheet.png" id="1_c1i0r"]
 [ext_resource type="Script" uid="uid://c3a7nachc5uwd" path="res://Scenes/Plane/Plane.gd" id="1_p0ear"]
+[ext_resource type="AudioStream" uid="uid://bcx3kc1j1efao" path="res://assets/audio/engine.mp3" id="3_kvaiv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0ear"]
 atlas = ExtResource("1_c1i0r")
@@ -32,8 +33,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_c1i0r"]
-radius = 23.0868
+[sub_resource type="CircleShape2D" id="CircleShape2D_p0ear"]
+radius = 11.0
 
 [sub_resource type="Animation" id="Animation_kvaiv"]
 length = 0.001
@@ -73,21 +74,27 @@ _data = {
 }
 
 [node name="Plane" type="CharacterBody2D"]
+position = Vector2(28, -27)
 script = ExtResource("1_p0ear")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.75, 0.75)
+position = Vector2(-24, -18)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_egu65")
 animation = &"fly"
 autoplay = "fly"
-frame = 2
-frame_progress = 0.186739
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, -2)
-shape = SubResource("CircleShape2D_c1i0r")
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_p0ear")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_kvaiv")
 }
+
+[node name="EngineSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_kvaiv")
+volume_db = -5.0
+autoplay = true

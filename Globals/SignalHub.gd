@@ -8,4 +8,4 @@ func emit_on_plane_died() -> void:
 
 func emit_on_point_scored() -> void:
 	on_point_scored.emit()
-	on_plane_died.emit()
+	#on_plane_died.emit()
