@@ -21,6 +21,7 @@ texture = ExtResource("1_rdw05")
 position = Vector2(57, 439)
 
 [node name="Barrier" parent="." instance=ExtResource("3_xbxml")]
+position = Vector2(105, 75)
 
 [node name="PipesHolder" type="Node" parent="."]
 
@@ -29,10 +30,10 @@ wait_time = 1.2
 autostart = true
 
 [node name="UpperPoint" type="Marker2D" parent="."]
-position = Vector2(432, 283)
+position = Vector2(513, 294)
 
 [node name="LowerPoint" type="Marker2D" parent="."]
-position = Vector2(435, 591)
+position = Vector2(508, 573)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

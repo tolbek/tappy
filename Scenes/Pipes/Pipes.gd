@@ -12,7 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	position.x == SPEED * delta
+	position.x -= SPEED * delta
 	
 	if position.x < get_viewport_rect().position.x - OFF_SCREEN:
 		die()

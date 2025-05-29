@@ -20,10 +20,7 @@ func spawn_pipes() -> void:
 		upper_point.position.y,
 		lower_point.position.y,
 	)
-	newpipes.position = Vector2(
-		upper_point.position.x,
-		y_pos
-	)
+	newpipes.position = Vector2(upper_point.position.x, y_pos)
 	pipes_holder.add_child(newpipes)
 
 
